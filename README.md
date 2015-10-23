@@ -1,2 +1,4 @@
 # snippets
-放些常用的代码模板，节约大家敲无聊代码的时间（C++尤其多）
+usnage:
+type: myfile[TAB]
+have fun
