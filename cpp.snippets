@@ -1,0 +1,59 @@
+#use tab to begin with each snippet
+# Read File Into Vector
+snippet readfile
+	#include <fstream>
+	std::ifstream my_file("test.txt");
+	std::string line;
+	while(!pfile->eof() && std::getline(pfile, line))
+	{
+		${1}
+	}
+# std::map
+snippet map
+	std::map<${1:key}, ${2:value}> map${3};
+# std::vector
+snippet vector
+	std::vector<${1:char}> v${2};
+# Namespace
+snippet ns
+	namespace its {
+	namespace ${1:} {
+		${2}
+	}//endof namespace $1
+	}//endof namespace its
+# Class
+snippet cl
+	class ${1:`Filename('$1_t', 'name')`} {
+	public:
+		$1 (${2:arguments});
+		virtual ~$1 ();
+
+	private:
+		${3:/* data */}
+	};
+snippet fori
+	for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
+		${4:/* code */}
+	}
+snippet myfile
+	/**
+	* @file `Filename()` 
+	* @brief ${1}
+	* @author LiYan(liyan@diditaxi.com.cn)
+	* @version 1.0.0
+	* @date `system("date +%Y-%m-%d")`
+	*/
+	#ifndef ${2:`toupper(Filename('_$1_H_', '_UNTITLED_H_'))`}
+	#define $2
+	namespace its {
+	namespace radio {
+	${3}
+	}
+	}
+	#endif /*end of include guard: $2*/
+snippet myclass
+	class ${1}
+	{
+	public:
+	private:
+	};
